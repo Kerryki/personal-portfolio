@@ -7,6 +7,9 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: process.env.NODE_ENV === 'production' ? '/personal-portfolio-1' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/personal-portfolio-1/' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
